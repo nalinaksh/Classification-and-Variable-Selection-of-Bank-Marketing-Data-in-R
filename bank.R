@@ -1,5 +1,5 @@
 set.seed(1);
-bank = read.csv('/Users/nalinakshgaur/Downloads/bank/bank-full.csv', header = TRUE, sep = ';');
+bank = read.csv('/path-to-file/bank/bank-full.csv', header = TRUE, sep = ';');
 attach(bank);
 glm.fit = glm(y~., bank, family = binomial);
 glm.probs = predict(glm.fit, type = 'response');
